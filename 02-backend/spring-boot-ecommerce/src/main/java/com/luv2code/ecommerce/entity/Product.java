@@ -1,53 +1,47 @@
 package com.luv2code.ecommerce.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import java.math.BigDecimal;
-import java.util.Date;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
-@Table(name="product")
-@Data
+@Table(name = "product")
+@Getter
+@Setter
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "category_id", nullable = false)
-    private ProductCategory category;
-
-    @Column(name = "sku")
+    @Column(name = "sku", nullable = false)
     private String sku;
 
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String name;
 
     @Column(name = "description")
     private String description;
 
-    @Column(name = "unit_price")
-    private BigDecimal unitPrice;
+    @Column(name = "unit_price", nullable = false)
+    private Double unitPrice;
 
     @Column(name = "image_url")
     private String imageUrl;
 
     @Column(name = "active")
-    private boolean active;
+    private Boolean active;
 
     @Column(name = "units_in_stock")
-    private int unitsInStock;
+    private Integer unitsInStock;
 
     @Column(name = "date_created")
-    @CreationTimestamp
-    private Date dateCreated;
+    private String dateCreated;
 
     @Column(name = "last_updated")
-    @UpdateTimestamp
-    private Date lastUpdated;
+    private String lastUpdated;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id", nullable = false)
+    private ProductCategory category;
 }
