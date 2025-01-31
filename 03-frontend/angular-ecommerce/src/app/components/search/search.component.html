@@ -1,14 +1,12 @@
-<div class="form-header d-flex align-items-center">
-  <input
-    #myInput
-    class="form-control me-2"
-    type="text"
-    name="search"
-    placeholder="Search for products by Pyoyoyo..."
-    style="width: 300px"
-    (key.up.enter)="doSearch(myInput.value)"
-  />
-  <button class="btn btn-primary" onclick="doSearch(myInput.value)">
-    Search
-  </button>
+<div class="form-header">
+
+    <input #myInput type="text" 
+           placeholder="Search for products ..."
+           class="au-input au-input-xl"
+           (keyup.enter)="doSearch(myInput.value)"  />
+
+    <button (click)="doSearch(myInput.value)" class="au-btn-submit">
+        Search
+    </button>
+
 </div>

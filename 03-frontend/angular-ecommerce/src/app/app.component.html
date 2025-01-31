@@ -1,72 +1,51 @@
-<!-- MENU SIDEBAR-->
-<aside class="menu-sidebar d-none d-lg-block bg-light shadow">
-  <div class="logo text-center py-3">
-    <a href="home.html">
-      <img
-        src="assets/images/logo.png"
-        alt="eCommerce Logo"
-        class="img-fluid"
-        style="max-width: 150px"
-      />
-    </a>
-  </div>
-  <app-product-category-menu></app-product-category-menu>
-</aside>
-<!-- END MENU SIDEBAR-->
+<div class="page-wrapper">
 
-<!-- PAGE CONTAINER-->
-<div class="page-container">
-  <!-- HEADER DESKTOP-->
-  <header class="header-desktop bg-white shadow">
-    <div class="section-content section-content-p30">
-      <div
-        class="container-fluid d-flex justify-content-between align-items-center py-3"
-      >
-        <app-search></app-search>
-        <div class="cart-area">
-          <a
-            href="shopping-detail.html"
-            class="d-flex align-items-center text-dark"
-          >
-            <i class="fa fa-shopping-cart me-2" aria-hidden="true"></i>
-            <div class="d-flex flex-column">
-              <span class="fw-bold">$19.22</span>
-              <small>2 items</small>
+  <!-- MENU SIDEBAR-->
+  <aside class="menu-sidebar d-none d-lg-block">
+    <div class="logo">
+      <a href="#">
+        <img src="assets/images/logo.png" alt="luv2shop" class="img-responsive">
+      </a>
+    </div>
+
+    <app-product-category-menu></app-product-category-menu>
+
+  </aside>
+  <!-- END MENU SIDEBAR-->
+
+  <div class="page-container">
+    <!-- HEADER DESKTOP-->
+    <header class="header-desktop">
+      <div class="section-content section-content-p30">
+        <div class="container-fluid">
+          <div class="header-wrap">
+
+            <app-search></app-search>
+            
+            <div class="cart-area d-n">
+              <a href="shopping-detail.html">
+                <div class="total">19.22 <span> 2</span> </div> <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>
             </div>
-          </a>
+          </div>
+          <div class="account-wrap"></div>
         </div>
       </div>
-    </div>
-  </header>
-  <!-- END HEADER DESKTOP-->
+    </header>
+    <!-- END HEADER DESKTOP-->
 
-  <!-- MAIN CONTENT-->
-  <main class="main-content py-4">
-    <div class="container">
-      <router-outlet></router-outlet>
-    </div>
-  </main>
-  <!-- END MAIN CONTENT-->
-</div>
-<!-- END PAGE CONTAINER-->
+    <!-- MAIN CONTENT-->
+    <router-outlet></router-outlet>
 
-<!-- FOOTER -->
-<footer class="bg-dark text-white py-4">
-  <div class="container text-center">
-    <ul class="list-unstyled d-flex justify-content-center mb-0">
-      <li class="mx-3">
-        <a href="#" class="text-white text-decoration-none">About Us</a>
-      </li>
-      <li class="mx-3">
-        <a href="#" class="text-white text-decoration-none">Contact Us</a>
-      </li>
-      <li class="mx-3">
-        <a href="#" class="text-white text-decoration-none">Help</a>
-      </li>
-    </ul>
-    <small class="d-block mt-2"
-      >&copy; 2025 eCommerce Inc. All Rights Reserved.</small
-    >
   </div>
+</div>
+
+<!-- ENDS PAGE CONTAINER -->
+
+<footer>
+  <ul>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">Help</a></li>
+  </ul>
 </footer>
-<!-- END FOOTER -->
